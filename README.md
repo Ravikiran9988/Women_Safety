@@ -64,11 +64,15 @@ npm install
 
 Create .env:
 
+# Production-ready environment variables sample
 PORT=3000
-MONGODB_URI=your_mongodb_atlas_url
-CORS_ORIGINS=http://localhost:5173,http://localhost:8081
-JWT_SECRET=your_secret
+MONGODB_URI=<your_atlas_connection_string>
+CORS_ORIGINS=http://localhost:5173,http://localhost:5174,http://<your-lan-ip>:5173,http://<your-lan-ip>:5174
+NODE_ENV=development
 
+# Expo app integration
+EXPO_PUBLIC_SOS_API_URL=http://<your-server-ip>:3000/api/sos
+EXPO_PUBLIC_SMS_RECIPIENTS=+15551234567,+15559876543
 Run server:
 
 node server.mjs
